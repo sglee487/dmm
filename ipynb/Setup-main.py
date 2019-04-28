@@ -4,6 +4,7 @@ import glob, os, sys, time
 sys.path.append('../')
 from utils.misc import getConfigFile, readPickle, displayTime
 
+
 #Import load function to load synthetic data
 from dmm_data.load import load
 dataset = load('synthetic')
@@ -16,17 +17,20 @@ for dtype in ['train','valid','test']:
     print [(k,type(dataset[dtype][k]), dataset[dtype][k].shape) for k in dataset[dtype]]
     print '--------\n'
 
+
 start_time = time.time()
 from   model_th.dmm import DMM
 import model_th.learning as DMM_learn
 import model_th.evaluate as DMM_evaluate
 displayTime('importing DMM',start_time, time.time())
 
+
 params = readPickle('../default.pkl')[0]
 for k in params:
     print k, '\t',params[k]
 params['data_type'] = dataset['data_type']
 params['dim_observations'] = dataset['dim_observations']
+
 
 #The dataset is small, lets change some of the default parameters and the unique ID
 params['dim_stochastic'] = 2
@@ -46,3 +50,16 @@ pfile= params['savedir']+'/'+params['unique_id']+'-config.pkl'
 
 print 'Checkpoint prefix: ', pfile
 dmm  = DMM(params, paramFile = pfile)
+
+
+
+#savef specifies the prefix for the checkpoints - we'll use the same save directory as before
+savef    = os.path.join(params['savedir'],params['unique_id'])
+savedata = DMM_learn.learn(dmm, dataset['train'], epoch_start =0 ,
+                                epoch_end = params['epochs'],
+                                batch_size = 200,
+                                savefreq   = params['savefreq'],
+                                savefile   = savef,
+                                dataset_eval=dataset['valid'],
+                                shuffle    = True )
+
