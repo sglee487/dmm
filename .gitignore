@@ -21,3 +21,4 @@ ipynb/synthetic/*.pdf
 midi/
 
 .idea/
+venv/

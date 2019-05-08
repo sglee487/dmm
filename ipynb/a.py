@@ -1,5 +1,6 @@
 # https://github.com/spyder-ide/spyder/issues/3606
-
+# 여기서 실행하면 파이썬 파일 경로로 에러가 뜬다. 경로가 너무 길어서 자른댄다..
+# https://eehoeskrap.tistory.com/138
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
