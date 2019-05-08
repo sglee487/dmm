@@ -26,6 +26,9 @@ This package has the following requirements:
     * Wrapper around theano that takes care of bookkeeping, saving/loading models etc. Clone the github repository and add its location to the PYTHONPATH environment variable so that it is accessible by python.
 * An NVIDIA GPU w/ atleast 6G of memory is recommended.
 
+// about latex error
+// https://tex.stackexchange.com/questions/158700/latex-cant-find-sty-files-altough-packages-are-installed-texlive-ubuntu-12
+
 ## Optional
 I used the following `~/.theanorc` configuration file:
 ```
