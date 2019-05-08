@@ -19,3 +19,5 @@ ipynb/synthetic/*.pdf
 *.pkl
 *.txt
 midi/
+
+.idea/
