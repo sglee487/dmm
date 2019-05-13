@@ -6,7 +6,8 @@ import argparse,copy
 from collections import OrderedDict
 p = argparse.ArgumentParser(description="Arguments for variational autoencoder")
 parser = argparse.ArgumentParser()
-parser.add_argument('-dset','--dataset', action='store',default = 'mm', help='Dataset the model is trained on', type=str)
+# parser.add_argument('-dset','--dataset', action='store',default = 'mm', help='Dataset the model is trained on', type=str)
+parser.add_argument('-dset','--dataset', action='store',default = 'synthetic', help='Dataset the model is trained on', type=str)
 
 """
 Hyperparameters for the Inference/Recognition Model
@@ -65,7 +66,8 @@ parser.add_argument('-debug','--debug', action='store_true',help='Debug')
 parser.add_argument('-uid','--unique_id', action='store',default = 'uid',help='Unique Identifier',type=str)
 parser.add_argument('-seed','--seed', action='store',default = 1, help='Random Seed',type=int)
 parser.add_argument('-dir','--savedir', action='store',default = './chkpt', help='Prefix for the directory that the model will be loaded from',type=str)
-parser.add_argument('-ep','--epochs', action='store',default = 2000, help='MaxEpochs',type=int)
+# parser.add_argument('-ep','--epochs', action='store',default = 2000, help='MaxEpochs',type=int)
+parser.add_argument('-ep','--epochs', action='store',default = 20, help='MaxEpochs',type=int)
 parser.add_argument('-reload','--reloadFile', action='store',default = './NOSUCHFILE', help='Reload from saved model',type=str)
 parser.add_argument('-params','--paramFile', action='store',default = './NOSUCHFILE', help='Reload parameters from saved model',type=str)
 parser.add_argument('-sfreq','--savefreq', action='store',default = 10, help='Frequency of saving',type=int)
