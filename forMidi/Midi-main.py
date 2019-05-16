@@ -1,5 +1,4 @@
-# http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/
-# http://aqibsaeed.github.io/2016-09-24-urban-sound-classification-part-2/
+# https://github.com/sglee487/dmm
 
 import os
 import numpy as np
