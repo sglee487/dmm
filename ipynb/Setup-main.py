@@ -1,3 +1,6 @@
+# http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/
+# http://aqibsaeed.github.io/2016-09-24-urban-sound-classification-part-2/
+
 #General Purpose Imports
 import numpy as np
 import glob, os, sys, time

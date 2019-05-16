@@ -1,3 +1,6 @@
+# http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/
+# http://aqibsaeed.github.io/2016-09-24-urban-sound-classification-part-2/
+
 #Matplotlib imports
 # %matplotlib inline
 import matplotlib.pyplot as plt
@@ -58,3 +61,4 @@ ax.set_xlabel('Time')
 plt.suptitle('3 dimensional samples')
 
 plt.show()
+

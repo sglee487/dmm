@@ -1,3 +1,6 @@
+# http://aqibsaeed.github.io/2016-09-03-urban-sound-classification-part-1/
+# http://aqibsaeed.github.io/2016-09-24-urban-sound-classification-part-2/
+
 import os
 import numpy as np
 from utils.misc import loadHDF5
